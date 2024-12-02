@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page KICK SPACE - Fresh Kicks for the Heat!</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="homepage.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-left">
+                <a href="HomePage.html" class="logo">
+                    <img src="images/kick-space-high-resolution-logo-transparent-3-140x89.png" alt="KICK SPACE">
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="everything.html">EVERYTHING</a></li>
+                    <li><a href="women.html">WOMEN</a></li>
+                    <li><a href="men.html">MEN</a></li>
+                    <li><a href="login.php" id="loginLink">LOGIN</a></li>
+                    <li><a href="register.php" id="registerLink">REGISTER</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    <li><a href="AboutUs.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li class="price">R0.00</li>
+                    <li>
+                        <button class="cart-button" onclick="toggleCart()">
+                            <span class="cart-count">0</span>
+                            🛒
+                        </button>
+                    </li>
+
+                    <li><a href="dashboard.php" class="profile-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="7" r="4" />
+                                <path d="M12 14c-4 0-7 1.5-7 4v2h14v-2c0-2.5-3-4-7-4z" />
+                            </svg>
+                        </a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="close-button" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-content">
+            <div id="cartItems"></div>
+            <p class="empty-cart" id="emptyCartMessage">No products in the cart.</p>
+            <button class="checkout" onclick="checkLoginBeforeRedirect()">CHECKOUT</button>
+        </div>
+    </div>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Fresh Kicks for the<br> Heat!</h1><br>
+            <p>25% Off Your Favorite Sneakers</p><br>
+            <a href="everything.html" class="shop-now">SHOP NOW</a>
+        </div>
+    </section>
+
+    <section class="brands">
+        <img src="images/homepagebrandpic.jpg" alt="Adidas" class="brand-logo" style="width: 1000px; height: 105px;">
+    </section>
+
+
+    <section class="promo-cards">
+        <div class="promo-card">
+            <img src="images/homeimage1of3.jpeg" alt="20% OFF ON SNEAKERS!">
+            <div class="promo-content">
+                <h2>20% OFF ON SNEAKERS!</h2><br>
+                <h1 style="font-weight: normal;font-size: 20px;text-align: left;">Step up your style game with the
+                    latest kicks—now at
+                    20% OFF!</h1><br>
+                <a href="everything.html" class="btn">SHOP NOW</a>
+            </div>
+        </div>
+        <div class="promo-card">
+            <img src="images/homeimage2of3.webp" alt="FRESH SNEAKERS">
+            <div class="promo-content">
+                <h2>FRESH SNEAKERS</h2><br>
+                <h1 style="font-weight: normal;font-size: 20px;text-align: left">Upgrade your sneaker collection with
+                    the latest
+                    designs.</h1><br>
+                <a href="everything.html" class="btn">SHOP NOW</a>
+            </div>
+        </div>
+        <div class="promo-card">
+            <img src="images/homeimage3of3.webp" alt="WALK IN COMFORT">
+            <div class="promo-content">
+                <h2>WALK IN COMFORT</h2><br>
+                <h1 style="font-weight: normal;font-size: 20px;text-align: left">Check out the latest drops and refresh
+                    your rotation
+                </h1><br>
+                <a href="checkout.html" class="btn">CHECK OUT</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="container"><br><br><br>
+            <h1>Featured Products</h1>
+            <div class="underline"></div><br><br>
+            <div class="product-grid">
+                <div class="product-cards">
+                    <img src="images/homepageshoe1.webp" alt="Women's Superga Nylon Curly Bindings Sneakers"
+                        class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Women's Superga Nylon Curly Bindings White/Fuschia/Green Sneakers
+                        </div>
+                        <div class="product-brand">Women</div>
+                        <div class="product-price">R1,799.99</div>
+                        <div class="product-rating">★★★☆☆</div>
+                    </div>
+                </div>
+                <div class="product-cards">
+                    <img src="images/homepageshoe2.webp" alt="Women's Reebok Court Advance Surge Sneakers"
+                        class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Women's Reebok Court Advance Surge White/Red Sneakers</div>
+                        <div class="product-brand">Women</div>
+                        <div class="product-price">R1,599.99</div>
+                        <div class="product-rating">★★★☆☆</div>
+                    </div>
+                </div>
+                <div class="product-cards">
+                    <img src="images/homepageshoe3.webp" alt="Reebok Women's Club C Extra Dark-Grey Sneaker"
+                        class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Reebok Women's Club C Extra Dark-Grey Sneaker</div>
+                        <div class="product-brand">Women</div>
+                        <div class="product-price">R1,899.95</div>
+                        <div class="product-rating">★★★☆☆</div>
+                    </div>
+                </div>
+                <div class="product-cards">
+                    <img src="images/homepageshoe4.webp" alt="Vans Women's Upland White/Pink Sneaker"
+                        class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Vans Women's Upland White/Pink Sneaker</div>
+                        <div class="product-brand">Women</div>
+                        <div class="product-price">R2,199.95</div>
+                        <div class="product-rating">★★★☆☆</div>
+                    </div>
+                </div>
+                <div class="product-cards">
+                    <img src="images/homepageshoe5.webp" alt="Women's adidas Breaknet 2.0 White/Black Sneaker"
+                        class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Women's adidas Breaknet 2.0 White/Black Sneaker</div>
+                        <div class="product-brand">Women</div>
+                        <div class="product-price">R1,199.95</div>
+                        <div class="product-rating">★★★☆☆</div>
+                    </div>
+                </div>
+
+                <div class="product-cards">
+                    <img src="images/homepageshoe6.webp" alt="Women's adidas Breaknet 2.0 White/Black Sneaker"
+                        class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Converse Men’s Chuck 70 Mid Taupe Sneaker</div>
+                        <div class="product-brand">Men</div>
+                        <div class="product-price">R1,499.95</div>
+                        <div class="product-rating">★★★☆☆</div>
+                    </div>
+                </div>
+
+                <div class="product-cards">
+                    <img src="images/homepageshoe7.webp" alt="Women's adidas Breaknet 2.0 White/Black Sneaker"
+                        class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">New Balance Men’s 550 White/Grey Sneaker</div>
+                        <div class="product-brand">Men</div>
+                        <div class="product-price">R2,599.95</div>
+                        <div class="product-rating">★★★☆☆</div>
+                    </div>
+                </div>
+
+                <div class="product-cards">
+                    <img src="images/homepageshoe8.webp" alt="Women's adidas Breaknet 2.0 White/Black Sneaker"
+                        class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Converse Men’s Chuck 70 Plus Black/White Sneaker</div>
+                        <div class="product-brand">Men</div>
+                        <div class="product-price">R2,299.95</div>
+                        <div class="product-rating">★★★☆☆</div>
+                    </div>
+                </div>
+
+                <div class="product-cards">
+                    <img src="images/homepageshoe9.webp" alt="Women's adidas Breaknet 2.0 White/Black Sneaker"
+                        class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Vans Men’s CB Slip-On CT Pesto/White Sneaker</div>
+                        <div class="product-brand">Men</div>
+                        <div class="product-price">R849.95</div>
+                        <div class="product-rating">★★★☆☆</div>
+                    </div>
+                </div>
+
+                <div class="product-cards">
+                    <img src="images/homepageshoe10.webp" alt="Women's adidas Breaknet 2.0 White/Black Sneaker"
+                        class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">Puma Men’s Road Rider Multicolour Sneaker</div>
+                        <div class="product-brand">Men</div>
+                        <div class="product-price">R1,599.96</div>
+                        <div class="product-rating">★★★☆☆</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="page-body">
+            <section class="hero-section">
+                <div class="hero-section-content">
+                    <h2>Step Up Your Game</h2>
+                    <h1>Discover Your Perfect Pair</h1>
+                    <p>Explore our curated collection of sneakers, designed for every step you take. Style, comfort, and
+                        performance all in one place.</p>
+                    <a href="men.html" class="shop-now-button">Shop Now</a>
+                </div>
+            </section>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature">
+                    <img src="images/globe-free-img.png" alt="Shipping">
+                    <h3>Worldwide Shipping</h3>
+                    <p>Get your favorite sneakers delivered to your door, wherever you are!</p>
+                </div>
+                <div class="feature">
+                    <img src="images/quality-free-img.png" alt="Quality">
+                    <h3>Best Quality</h3>
+                    <p>Crafted for durability, comfort, and style sneakers that last!</p>
+                </div>
+                <div class="feature">
+                    <img src="images/tag-free-img.png" alt="Offers">
+                    <h3>Best Offers</h3>
+                    <p>Unbeatable price on the latest sneaker trend!</p>
+                </div>
+                <div class="feature">
+                    <img src="images/lock-free-img.png" alt="Payments">
+                    <h3>Secure Payments</h3>
+                    <p>Shop confidently with our safe and encrypted payment options!</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <div class="sale-banner">
+        <p>SALE UP TO 70% OFF ON SNEAKERS, ALL BRANDS INCLUDED!</p>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/kick-space-high-resolution-logo-transparent-6-1024x189.png" alt="Kick Space">
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Address</h3>
+                       <h4>35 Andries Potgieter</h4>
+                       <h4>Vanderbijlpark S.E.6</h4>
+                       <h4>South Africa</h4>
+                       
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>contacts</h3>
+                       <h4>079 128 8281</h4>
+                       <h4>kickspace@gmail.com</h4>
+                       <h4>complaints@gmail.com</h4>
+                       
+                    </div>
+                    <div class="footer-column">
+                        <h3>Subscribe</h3>
+                        <form class="subscribe-form">
+                            <input type="email" placeholder="Your email address...">
+                            <button type="submit"><strong>SUBSCRIBE</strong></button>
+                        </form>
+                    </div>
+            
+                </div>
+            </div>
+
+             
+    </footer>
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>Copyright © 2024 Kick Space, Powered by Kick Space</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                <a href="https://x.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            checkLoginStatus();
+        });
+
+        function checkLoginStatus() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'check_login.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    if (xhr.responseText.trim() === 'logged_in') {
+
+                        document.getElementById('loginLink').style.display = 'none';
+                        document.getElementById('registerLink').style.display = 'none';
+                    }
+                }
+            };
+            xhr.send();
+        }
+
+        let cartItems = [];
+        let cartTotal = 0;
+
+        function toggleCart() {
+            const modal = document.getElementById('cartModal');
+            modal.classList.toggle('active');
+        }
+
+        function updateOrderSummary() {
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const orderDetailsDiv = document.querySelector('.order-details');
+            const orderItemsDiv = document.querySelector('.order-details .order-item');
+            const orderSubtotal = document.querySelector('.order-subtotal span:last-child');
+            const orderTotal = document.querySelector('.order-total span:last-child');
+
+            let orderTotalAmount = 0;
+
+
+            orderItemsDiv.innerHTML = '';
+
+            cartItems.forEach(item => {
+                orderTotalAmount += item.price;
+
+                const orderItemHTML = `
+        <div class="order-item">
+            <span>${item.name} × 1</span>
+            <span>R${item.price.toFixed(2)}</span>
+        </div>
+    `;
+                orderItemsDiv.innerHTML += orderItemHTML;
+            });
+
+
+            orderSubtotal.textContent = `R${orderTotalAmount.toFixed(2)}`;
+            orderTotal.textContent = `R${orderTotalAmount.toFixed(2)}`;
+        }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartDisplay();
+            updateOrderSummary();
+        });
+
+        function addToCart(button) {
+            const card = button.closest('.product-card');
+            const name = card.querySelector('h4').textContent;
+            const price = parseFloat(button.getAttribute('data-price'));
+            const imageSrc = card.querySelector('.product-image img').src;
+
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            cartItems.push({ name, price, imageSrc });
+
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            updateCartDisplay();
+            updateOrderSummary();
+        }
+
+        function checkLoginBeforeRedirect() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'check_login.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    if (xhr.responseText === 'logged_in') {
+                        window.location.href = 'checkout.html';
+                    } else {
+                        alert('Please log in to access checkout.');
+                        window.location.href = 'login.php';
+                    }
+                }
+            };
+            xhr.send();
+        }
+
+
+
+
+        function updateCartDisplay() {
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsDiv = document.getElementById('cartItems');
+            const cartCount = document.querySelector('.cart-count');
+            const priceDisplay = document.querySelector('.price');
+            const emptyCartMessage = document.getElementById('emptyCartMessage');
+
+            let cartTotal = 0;
+
+            if (cartItems.length > 0) {
+                emptyCartMessage.style.display = 'none';
+                cartItemsDiv.innerHTML = cartItems.map((item, index) => {
+                    cartTotal += item.price;
+                    return `
+            <div class="cart-item" data-index="${index}">
+                <img src="${item.imageSrc}" alt="${item.name}" class="cart-image" style="width: 50px; height: 50px;">
+                <h4>${item.name}</h4>
+                <p>R${item.price.toFixed(2)}</p>
+                <button class="delete-item" style="padding: 3px 16px; background-color: #f44336; color: white; border: none; cursor: pointer;font">Remove</button>
+            </div>
+        `;
+                }).join('');
+            } else {
+                emptyCartMessage.style.display = 'block';
+                cartItemsDiv.innerHTML = '';
+            }
+
+            cartCount.textContent = cartItems.length;
+            priceDisplay.textContent = `R${cartTotal.toFixed(2)}`;
+
+
+            const deleteButtons = document.querySelectorAll('.delete-item');
+            deleteButtons.forEach(button => button.addEventListener('click', deleteCartItem));
+        }
+
+        function deleteCartItem(event) {
+            const button = event.target;
+            const cartItemDiv = button.closest('.cart-item');
+            const itemIndex = parseInt(cartItemDiv.getAttribute('data-index'), 10);
+
+            let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            cartItems.splice(itemIndex, 1);
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            updateCartDisplay();
+            updateOrderSummary();
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCartDisplay);
+
+
+        const slider = document.getElementById('priceRange');
+        const priceValue = document.getElementById('priceValue');
+
+        slider.oninput = function () {
+            priceValue.textContent = this.value;
+        }
+    </script>
+    <script>
+
+        let lastScrollTop = 0;
+        const header = document.querySelector('.header');
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+
+            if (scrollTop > lastScrollTop) {
+                header.classList.add('hidden');
+            } else {
+
+                header.classList.remove('hidden');
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+    </script>
+</body>
+
+</html>
